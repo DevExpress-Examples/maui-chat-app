@@ -1,5 +1,8 @@
 <!-- default badges list -->
-[![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T1026838)
+![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/671980886/23.2.5%2B)
+
+[![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T1237000)
+
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
@@ -22,7 +25,7 @@ This example uses DevExpress .NET MAUI Components to display a chat view with se
 
 ## Implementation Details
 
-1. Use a [`SafeKeyboardAreaView`](https://docs.devexpress.com/MAUI/DevExpress.Maui.Core.SafeKeyboardAreaView) as the root for the view layout. This way, the device keyboard will not overlap the message view when it appears.
+1. Use a [`SafeKeyboardAreaView`](https://docs.devexpress.com/MAUI/DevExpress.Maui.Core.SafeKeyboardAreaView) as the root for the view layout. When implemented in this manner, the device keyboard will not overlap the message view when it appears on-screen.
 
     ```xaml
     <dx:SafeKeyboardAreaView> 
@@ -30,7 +33,7 @@ This example uses DevExpress .NET MAUI Components to display a chat view with se
     </dx:SafeKeyboardAreaView>
     ```
 
-2. Use the [`DXCollectionView`](https://docs.devexpress.com/MAUI/DevExpress.Maui.CollectionView.DXCollectionView) control to display messages. Specify the data source and item templates (use different templates for sender and receiver). Groups items using a built-in algorithm that uses date/time ranges ("Today", "Yesterday", "Last Week", and so on). Specify a template for group headers. 
+2. Use the [`DXCollectionView`](https://docs.devexpress.com/MAUI/DevExpress.Maui.CollectionView.DXCollectionView) control to display messages. Specify the data source and item templates (use different templates for sender and receiver). Groups items using a built-in algorithm that uses date/time ranges ("Today", "Yesterday", "Last Week", etc). Specify a template for group headers.
 
     ```xaml
         <dxcv:DXCollectionView
@@ -45,7 +48,7 @@ This example uses DevExpress .NET MAUI Components to display a chat view with se
         </dxcv:DXCollectionView>
     ```
 
-3. Use [`DXContentPresenter`](https://docs.devexpress.com/MAUI/DevExpress.Maui.Core.DXContentPresenter) components to define templates for sender and receiver messages. 
+3. Use [`DXContentPresenter`](https://docs.devexpress.com/MAUI/DevExpress.Maui.Core.DXContentPresenter) components to define templates for sender and receiver messages.
 
     ```xaml
         <ContentPage.Resources>
@@ -61,7 +64,7 @@ This example uses DevExpress .NET MAUI Components to display a chat view with se
         </ContentPage.Resources>
     ```
     
-4. Call the [`DXCollectionView.ScrollTo()`](https://docs.devexpress.devx/MAUI/DevExpress.Maui.CollectionView.DXCollectionView.ScrollTo(System.Int32)) method to scroll the view to the last message:
+4. Call the [`DXCollectionView.ScrollTo()`](https://docs.devexpress.devx/MAUI/DevExpress.Maui.CollectionView.DXCollectionView.ScrollTo(System.Int32)) method to scroll the view to the last message.
 
     ```csharp
     public partial class MainPage : ContentPage {
@@ -72,7 +75,7 @@ This example uses DevExpress .NET MAUI Components to display a chat view with se
     }
     ```
     
-5. Use the [`ChipGroup`](https://docs.devexpress.devx/MAUI/DevExpress.Maui.Editors.ChipGroup) control to display short answers:
+5. Use the [`ChipGroup`](https://docs.devexpress.devx/MAUI/DevExpress.Maui.Editors.ChipGroup) control to display short answers.
 
     ```xaml
     <dxe:ChipGroup ...      
@@ -92,7 +95,7 @@ This example uses DevExpress .NET MAUI Components to display a chat view with se
     }
     ```
 
-6. Use the [`TextEdit`](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.TextEdit) control to create an input field where a user can text a message. To send the message, specify the [DXButton](https://docs.devexpress.com/MAUI/DevExpress.Maui.Core.DXButton) control.
+6. Use the [`TextEdit`](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.TextEdit) control to create/display a text message input field. To send the message, specify the [DXButton](https://docs.devexpress.com/MAUI/DevExpress.Maui.Core.DXButton) control.
 
     ```xaml
     <Grid ... >
