@@ -19,7 +19,7 @@ This example uses DevExpress .NET MAUI Components to display a chat view with se
 * [SafeKeyboardAreaView](https://docs.devexpress.com/MAUI/DevExpress.Maui.Core.SafeKeyboardAreaView)
 * [ChipGroup](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.ChipGroup): [ChipTapCommand](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.ChipGroup.ChipTapCommand), [ItemsSource](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.ChipGroup.ItemsSource), [IsMultiline](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.ChipGroup.IsMultiline), [DisplayMember](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.ChipGroup.DisplayMember)
 * [TextEdit](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.TextEdit): [PlaceholderText](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.EditBase.PlaceholderText), [Text](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.TextEditBase.Text)
-* [DXButton](https://docs.devexpress.devx/MAUI/DevExpress.Maui.Core.DXButton): [Command](https://docs.devexpress.com/MAUI/DevExpress.Maui.Core.DXButtonBase.Command), [Icon](https://docs.devexpress.devx/MAUI/DevExpress.Maui.Core.DXContentPresenter.Icon)
+* [DXButton](https://docs.devexpress.com/MAUI/DevExpress.Maui.Core.DXButton): [Command](https://docs.devexpress.com/MAUI/DevExpress.Maui.Core.DXButtonBase.Command), [Icon](https://docs.devexpress.com/MAUI/DevExpress.Maui.Core.DXContentPresenter.Icon)
 
 ## Implementation Details
 
@@ -62,7 +62,7 @@ This example uses DevExpress .NET MAUI Components to display a chat view with se
         </ContentPage.Resources>
     ```
     
-4. Call the [`DXCollectionView.ScrollTo()`](https://docs.devexpress.devx/MAUI/DevExpress.Maui.CollectionView.DXCollectionView.ScrollTo(System.Int32)) method to scroll the view to the last message.
+4. Call the [`DXCollectionView.ScrollTo()`](https://docs.devexpress.com/MAUI/DevExpress.Maui.CollectionView.DXCollectionView.ScrollTo(System.Int32)) method to scroll the view to the last message.
 
     ```csharp
     public partial class MainPage : ContentPage {
@@ -73,7 +73,7 @@ This example uses DevExpress .NET MAUI Components to display a chat view with se
     }
     ```
     
-5. Use the [`ChipGroup`](https://docs.devexpress.devx/MAUI/DevExpress.Maui.Editors.ChipGroup) control to display short answers.
+5. Use the [`ChipGroup`](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.ChipGroup) control to display short answers.
 
     ```xaml
     <dxe:ChipGroup ...      
