@@ -34,32 +34,32 @@ This example uses DevExpress .NET MAUI Components to display a chat view with se
 2. Use the [`DXCollectionView`](https://docs.devexpress.com/MAUI/DevExpress.Maui.CollectionView.DXCollectionView) control to display messages. Specify the data source and item templates (use different templates for sender and receiver). Groups items using a built-in algorithm that uses date/time ranges ("Today", "Yesterday", "Last Week", etc). Specify a template for group headers.
 
     ```xaml
-        <dxcv:DXCollectionView
+    <dxcv:DXCollectionView
         ItemsSource="{Binding Messages}"
         ItemTemplate="{local:MessageTemplateSelector SenderTemplate=..., RecipientTemplate=...}"
         GroupHeaderTemplate="{StaticResource dayGroupTemplate}"
-        ...
-        >
-            <dxcv:DXCollectionView.GroupDescription>
-                <dxcv:GroupDescription FieldName="SentAt" GroupInterval="DateRange" />
-            </dxcv:DXCollectionView.GroupDescription>
-        </dxcv:DXCollectionView>
+        ... 
+    >
+        <dxcv:DXCollectionView.GroupDescription>
+            <dxcv:GroupDescription FieldName="SentAt" GroupInterval="DateRange" />
+        </dxcv:DXCollectionView.GroupDescription>
+    </dxcv:DXCollectionView>
     ```
 
 3. Use [`DXContentPresenter`](https://docs.devexpress.com/MAUI/DevExpress.Maui.Core.DXContentPresenter) components to define templates for sender and receiver messages.
 
     ```xaml
-        <ContentPage.Resources>
-                <DataTemplate x:Key="senderMessageTemplate"  x:DataType="{x:Type local:Message}">
-                    <dx:DXContentPresenter ... >
-                    </dx:DXContentPresenter>
-                </DataTemplate>
-                <DataTemplate x:Key="recipientMessageTemplate" x:DataType="{x:Type local:Message}">
-                    <dx:DXContentPresenter ... >
-                    </dx:DXContentPresenter>
-                </DataTemplate>
-                ...
-        </ContentPage.Resources>
+    <ContentPage.Resources>
+        <DataTemplate x:Key="senderMessageTemplate"  x:DataType="{x:Type local:Message}">
+            <dx:DXContentPresenter ... >
+            </dx:DXContentPresenter>
+        </DataTemplate>
+        <DataTemplate x:Key="recipientMessageTemplate" x:DataType="{x:Type local:Message}">
+            <dx:DXContentPresenter ... >
+            </dx:DXContentPresenter>
+        </DataTemplate>
+        ...
+    </ContentPage.Resources>
     ```
     
 4. Call the [`DXCollectionView.ScrollTo()`](https://docs.devexpress.com/MAUI/DevExpress.Maui.CollectionView.DXCollectionView.ScrollTo(System.Int32)) method to scroll the view to the last message.
