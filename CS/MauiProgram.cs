@@ -5,7 +5,6 @@ using Microsoft.Maui.Controls.Compatibility;
 using Microsoft.Maui.Controls.Compatibility.Hosting;
 using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Hosting;
-using DotNet.Meteor.HotReload.Plugin; // TODO
 
 namespace ChatApplication {
     public static class MauiProgram {
