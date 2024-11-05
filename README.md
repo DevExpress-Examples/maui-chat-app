@@ -125,6 +125,7 @@ This example uses DevExpress .NET MAUI Components to display a chat view with se
 ## More Examples
 
 * [DevExpress .NET MAUI Demo Center](https://github.com/DevExpress-Examples/maui-demo-app)
+* [Blazor AI Chat](https://github.com/DevExpress-Examples/devexpress-ai-chat-samples)
 * [Stocks App](https://github.com/DevExpress-Examples/maui-stocks-mini)
 * [Data Grid](https://github.com/DevExpress-Examples/maui-data-grid-get-started)
 * [Data Form](https://github.com/DevExpress-Examples/maui-data-form-get-started)
